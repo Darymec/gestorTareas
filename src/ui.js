@@ -10,14 +10,14 @@ export const renderTasks = () => {
         li.setAttribute("data-id", task.id);
 
         //Añadir clase solo si la tarea está completada
-        if(task.complete === true) {
+        if(task.completed === true) {
             li.classList.add("completed");
         }
 
         li.innerHTML= `
             ${task.text}
             <button class="delete"> Eliminar </button>
-            <button class="toggle"> ${task.complete === false ? "Completar" : "Deshacer"} </button>
+            <button class="toggle"> ${task.completed === false ? "Completar" : "Deshacer"} </button>
         `;
 
         taskList.appendChild(li);
